@@ -1,47 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>Word Basket</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<title>Word Basket</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
 </head>
  <body>
-
-
 <!-- HTML to include to WP   START-->
-
-  <div class="basket_wrapper">
-  <div class="game_field"> 
-    <div  id="basket_overlay">
-      <div id="basket_result">
-        <span id="close_popup_basket">X</span>
-        <div id="basket_message"></div>
-        <button class="wordbasket_button" id="wordbasket_restart"></button>
-      </div>
-    </div>
-    <button class="wordbasket_button" id="wordbasket_start"></button>   
-    <button class="wordbasket_button direction" id="wordbasket_left"></button>
-    <button class="wordbasket_button direction" id="wordbasket_right"></button>
-    <div id="gameBasketBox">           
-      <div class="track_box">
-      <div class="track"></div>
-      <div class="track"></div>
-      <div class="track"></div>
-      <div class="track"></div>
-      <div class="track"></div>
-    </div>
-      <div id="wordBasket">
-        <div id="wordScore"></div>
-      </div>
-    </div>
-  </div>
-
-
+<div class="basket_wrapper">
+	<div class="game_field"> 
+		<div  id="basket_overlay">
+			<div id="basket_result">
+				<span id="close_popup_basket">X</span>
+				<div id="basket_message"></div>
+				<button class="wordbasket_button" id="wordbasket_restart"></button>
+			</div>
+		</div>
+		<button class="wordbasket_button" id="wordbasket_start"></button>   
+		<button class="wordbasket_button direction" id="wordbasket_left"></button>
+		<button class="wordbasket_button direction" id="wordbasket_right"></button>
+		<div id="gameBasketBox">           
+			<div class="track_box">
+			<div class="track"></div>
+			<div class="track"></div>
+			<div class="track"></div>
+			<div class="track"></div>
+			<div class="track"></div>
+		</div>
+		<div id="wordBasket">
+			<div id="wordScore"></div>
+		</div>
+	</div>
+</div>
 <!-- END  -->
-
-
-
-  <script  src="./basket.js"></script>
-  </body>
+<script  src="basket.js"></script>
+</body>
 </html>

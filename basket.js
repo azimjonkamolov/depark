@@ -24,11 +24,11 @@ let player_oldX = 0;
 let track_line = [0,1,2,3,4];
 let track_line_index = 0;
 let words_basket_array = [
-  ['Customer Focus', 'Customer Foam Cleanser', 'Customer Foous' , 'Costomer Focns', 'Customr Focus' ],
-  ['Agility', 'Ability', 'Aqility' , 'Angry', 'Agilty' ],
-  ['Collaboration', 'Collavoration', 'Conaboration' , 'Colaboration', 'Cullaboration' ],
-  ['Passion', 'Fashion', 'Fassion' , 'Pession', 'Psasion' ],
-  ['Sustainability', '5ustionability', 'Sustianability' , 'Sostatinablity', 'Sustainablity' ]
+	['Customer Focus', 'Customer Foam Cleanser', 'Customer Foous' , 'Costomer Focns', 'Customr Focus' ],
+	['Agility', 'Ability', 'Aqility' , 'Angry', 'Agilty' ],
+	['Collaboration', 'Collavoration', 'Conaboration' , 'Colaboration', 'Cullaboration' ],
+	['Passion', 'Fashion', 'Fassion' , 'Pession', 'Psasion' ],
+	['Sustainability', '5ustionability', 'Sustianability' , 'Sostatinablity', 'Sustainablity' ]
 ];
 // shuffle arrays of words
 function shuffle(array) {
@@ -38,27 +38,26 @@ function shuffle(array) {
 }
 // get a set of words to show
 function getWordsSequence(){
-let correctness;
-play_array = [];
-let collected_array = [];
-for(let j=0; j< words_basket_array.length; j++){  
-  for(let i=0; i< words_basket_array[j].length; i++){
-   if(i==0){ 
-     correctness = 'correct';
-     }
-     else{
-      correctness = 'wrong';
-     }
-   let falling_word = document.createElement('div');
-   falling_word.innerText = words_basket_array[j][i];
-
-   // let flow_position = Math.random() < 0.5 ? 'left' : 'right';
-   falling_word.className = 'falling_word  ' +  correctness + ' flow_elements';
-   collected_array.push(falling_word); 
- }
-   shuffle(collected_array);
-   play_array.push(collected_array);
-   collected_array = [];
+	let correctness;
+	play_array = [];
+	let collected_array = [];
+	for(let j=0; j< words_basket_array.length; j++){  
+		for(let i=0; i< words_basket_array[j].length; i++){
+			if(i==0){ 
+					correctness = 'correct';
+				}
+				else{
+					correctness = 'wrong';
+				}
+			let falling_word = document.createElement('div');
+			falling_word.innerText = words_basket_array[j][i];
+			// let flow_position = Math.random() < 0.5 ? 'left' : 'right';
+			falling_word.className = 'falling_word  ' +  correctness + ' flow_elements';
+			collected_array.push(falling_word); 
+		}
+		shuffle(collected_array);
+		play_array.push(collected_array);
+		collected_array = [];
    }
    shuffle(play_array);
    shuffle(track_line);
